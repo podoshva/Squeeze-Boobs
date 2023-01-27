@@ -1,0 +1,16 @@
+body {
+  background-color: rgb(35, 16, 47);
+  display: flex;
+  justify-content: center;
+}
+
+
+img {
+  cursor: grab;
+  width: 600px;
+  height: 800px;
+}
+
+img:active {
+  cursor: grabbing;
+}
