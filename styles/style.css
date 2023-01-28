@@ -2,15 +2,34 @@ body {
   background-color: rgb(35, 16, 47);
   display: flex;
   justify-content: center;
+  font-family: 'Roboto';
 }
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+header {
+  display: flex;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  position: relative;
+}
+
 
 
 img {
   cursor: grab;
-  width: 600px;
-  height: 800px;
+  width: 800px;
+  height: 1000px;
 }
 
-img:active {
-  cursor: grabbing;
+.frameOut {
+  display: flex;
+}
+
+#counter {
+  position: absolute;
+  margin-left: 140px;
 }
