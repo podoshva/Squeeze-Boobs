@@ -10,7 +10,7 @@ function letGoBoobs() {
   frame.style.cursor = "grab";
   for(let i = 2; i >= 0; i--) {
     frame.src = "frames/" + frames[i] + ".png";
-    frameOut.appendChild(frame)
+    frameOut.appendChild(frame);
   };
 }
 
@@ -27,15 +27,32 @@ window.addEventListener("load", function() {
   frameOut.appendChild(frame);
 });
 
-frame.addEventListener("mousedown", function() {
-  click += 1;
-  counter.innerHTML = click;
-  squeezeBoobs();
-});
 
-frame.addEventListener("mouseup", function() {
-  letGoBoobs();
-});
+if(window.innerWidth < 500) {
+  frame.style.width = "400px";
+  frame.style.height = "400px";
+  frame.addEventListener("touchstart", function(e) {
+    click += 1;
+    counter.innerHTML = click;
+    squeezeBoobs();
+  });
+  frame.addEventListener("touchend", function(e) {
+    letGoBoobs();
+  });
+
+} else {
+  frame.addEventListener("mousedown", function(e) {
+    click += 1;
+    counter.innerHTML = click;
+    squeezeBoobs();
+  });
+  
+  frame.addEventListener("mouseup", function(e) {
+    letGoBoobs();
+  });
+}
+
+
 
 
 

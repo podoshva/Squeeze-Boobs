@@ -1,7 +1,5 @@
 body {
   background-color: rgb(35, 16, 47);
-  display: flex;
-  justify-content: center;
   font-family: 'Roboto';
 }
 
@@ -11,25 +9,30 @@ body::-webkit-scrollbar {
 
 header {
   display: flex;
-  color: white;
+  justify-content: center;
+  color: rgb(250, 250, 250);
   font-size: 40px;
   font-weight: bold;
   position: relative;
+  background-color: rgb(118, 25, 179);
 }
-
-
 
 img {
   cursor: grab;
-  width: 800px;
-  height: 1000px;
+  width: 600px;
+  height: 600px;
 }
 
 .frameOut {
   display: flex;
+  justify-content: center;
+}
+
+.squeezes {
+  width: 130px;
+  display: inline-block;
 }
 
 #counter {
-  position: absolute;
-  margin-left: 140px;
+  display: inline-block;
 }
